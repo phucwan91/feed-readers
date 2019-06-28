@@ -1,0 +1,17 @@
+App\Entity\FeedCategory:
+  type: entity
+  repositoryClass: App\Repository\FeedCategoryRepository
+  table: feed_category
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+
+  fields:
+    name:
+      type: string
+
+  oneToMany:
+    feeds:
+      targetEntity: App\Entity\Feed
+      mappedBy: category

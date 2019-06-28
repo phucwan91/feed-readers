@@ -1,0 +1,19 @@
+app.index:
+    path: /
+    controller: App\Controller\FeedController::listAction
+
+app.feed.list:
+    path: /feeds
+    controller: App\Controller\FeedController::listAction
+
+app.feed.create:
+    path: /feeds/create
+    controller: App\Controller\FeedController::createAction
+
+app.feed.edit:
+    path: /feeds/{id}/edit
+    controller: App\Controller\FeedController::editAction
+
+app.feed.delete:
+    path: /feeds/{id}/delete
+    controller: App\Controller\FeedController::deleteAction

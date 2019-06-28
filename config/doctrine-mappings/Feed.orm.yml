@@ -1,0 +1,17 @@
+App\Entity\Feed:
+  type: entity
+  repositoryClass: App\Repository\FeedRepository
+  table: feed
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+
+  fields:
+    data:
+      type: text
+
+  manyToOne:
+    category:
+      targetEntity: App\Entity\FeedCategory
+      inversedBy: feeds
